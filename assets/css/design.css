@@ -1,0 +1,134 @@
+
+:root {
+	--main-bg-color : #002060;
+	--dropdown-height : 1.1em;
+	--dropdown-menu-font : 1em;
+  }
+
+.main-div{
+	background-color: #f0f0f0 !important;
+}
+
+/* menu bar */
+.navbar{
+	background-color: var(--main-bg-color);
+}
+
+.navbar .container a{
+	width: 30%;
+}
+.navbar-brand img {
+	width: 100px;
+	height: auto;
+}
+.navbar-toggler {
+	font-size: 1em;
+	padding: 0;
+	border: none;
+}
+.navbar .empty-span{
+	width: 1em;
+}
+
+/* tabs */
+.nav-tabs{
+	padding: 5px 20px;
+	border-bottom: none;
+}
+.nav-tabs .nav-link{
+	color:gray;
+	padding: 0;
+	text-align: center;
+}
+.nav-tabs .nav-link.active{
+	color:red;
+	background-color: initial;
+	border-color: transparent;
+}
+
+.nav-tabs .nav-link span{
+	display: block;
+}
+
+.tab-content{
+	padding: 0 10px;
+}
+
+/* league-state */
+.league-state{
+	background-color: white;
+	border-radius: 10px 10px 0px 0px;
+	margin-top: 10px;
+	color: var(--main-bg-color);
+}
+.league-state > div{
+	text-align: center;
+}
+.league-state img {
+	width:60px;
+	height: 60px;
+	border-radius: 30px;
+}
+.league-state span {
+	display: block;
+	border-radius: 30px;
+}
+.center-mark {
+	padding-top: 26px !important;
+	color: red;
+	font-weight: bold;
+}
+
+
+
+/* panel css */
+
+.panel{
+	margin-top:16px;
+}
+.panel-header {
+	border-radius: 10px 10px 0 0;
+	text-align: center;
+	font-size: var(--dropdown-height);
+	font-weight: bolder;
+	line-height: var(--dropdown-height);
+	padding: 0.4em 0px;
+	color: white;
+	background: var(--main-bg-color);
+}
+
+/* dropdown css */
+
+.dropdown{
+	background: white;
+	color: var(--main-bg-color);
+	padding: 0.9em 0px;
+	border-radius: 0px 0px 10px 10px;
+	box-shadow: #b9b7b7 0px 0px 2px;
+}
+.dropdown-toggle {
+	background: transparent;
+	text-align: center;
+	font-weight: bold;
+	font-size:  var(--dropdown-height);
+	line-height:  var(--dropdown-height);
+}
+.dropdown-toggle::after{
+	display: none;
+}
+.dropdown-menu {
+	width: 100%;
+	font-size:  var(--dropdown-menu-font);
+	text-align: center;
+}
+.footer{
+	text-align: center;
+	margin: 20px auto;
+}
+
+.footer input {
+	padding: 5px 3em;
+	font-size: 1.2em;
+	font-weight: bold;
+	border-radius: 10px;
+}

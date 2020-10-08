@@ -8,7 +8,8 @@
 
 .navbar{
 	border-bottom-left-radius: 16px;
-    border-bottom-right-radius: 16px;
+	border-bottom-right-radius: 16px;
+	background-color: #0088FF !important;
 }
 .navbar .container a{
 	width: 30%;
@@ -90,23 +91,3 @@
 	font-size: 1.2em;
 	margin-bottom: 20px;
 }
-/* 
-
-.tabs{
-	flex: auto;
-}
-.tabs li {
-	text-align: center;
-	display: inline-block;
-	padding: 4px 10px;
-}
-.tabs img{
-	width: 30px;
-	height: auto;
-}
-.tabs a {
-	font-size: 10px;
-	font-weight: bolder;
-	padding: 0;
-	color: #979595;
-} */
