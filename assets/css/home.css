@@ -1,93 +1,67 @@
-
-
-
-.main-div{
-	background-color: #f0f0f0;
+.main-div {
+    background-color: #f0f0f0;
 }
 
 
-.navbar{
-	border-bottom-left-radius: 16px;
-	border-bottom-right-radius: 16px;
-	background-color: #0088FF !important;
-}
-.navbar .container a{
-	width: 30%;
-}
-.navbar-brand img {
-	width: 100px;
-	height: auto;
-}
-
-.navbar-avata img, .navbar-alarm img{
-	width: 30px;
-	height: auto;
-}
-.navbar-avata img{
-	background-color: #FAA61B;
-	border-radius: 50%;
-}
-.navbar-avata{
-	text-align: left;
-}
-.navbar-alarm{
-	text-align: right;
-}
-
-
-
-.nav-tabs {
-	background: #fff;
-	margin-top: -10px;
-	padding-top: 20px;
-	border-radius: 0px 0px 10px 10px;
-}
-
-
-
-
-.nav-tabs .nav-item {
-	/* margin-bottom: -1px; */
-	text-transform: uppercase;
-	font-size: 10px;
-	font-weight: bolder;
-	text-align: center;
-	margin: 0 auto;
-	min-width: 50px;	
-}
-.nav-item img{
-	width: 30px;
-	height: auto;
-}
-.nav-tabs .nav-item a {
-	color: #979595;
-	padding: 0;
-}
-.nav-tabs .nav-item span {
-	display: block;
-}
-
-.nav-tabs .nav-link.active {
-    color: #0088FF;
-    background-color: #fff;
-	border-color: #fff #fff #08F #fff;
-	border-bottom: solid 3px;
-}
-.tab-content{
-	padding-top: 6px;
-}
-.leagues {
-	width: 100%;
-	padding: 10px;
-}
-.leagues img{
-	width: 100%;
-	height: auto;
-	border-radius: 20px;
-	margin: 10px auto;
-}
 .footer {
-	text-align: center;
-	font-size: 1.2em;
-	margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.import-tag {
+    width: 100%;
+    height: 140px;
+    border-radius: 20px;
+    margin: 10px auto;
+    background: white;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: #e1e1e1;
+    margin: 10px 0;
+}
+
+.league-header {
+    padding: 10px 15px;
+    height: 25px;
+}
+
+.league-header span, .league-header i {
+    line-height: 20px;
+    color: gray;
+    font-weight: 600;
+}
+
+
+.league-body {
+    text-align: center;
+}
+
+.league-body>img {
+    width: 60px;
+    height: auto;
+}
+
+.league-center {
+    width: 60%;
+    display: inline-block;
+}
+
+.time-span {
+    font-weight: 600;
+    color: #0087ff;
+}
+.team-center-span{
+    color: gray;
+    font-weight: 600;
+}
+.team-names{
+    padding: 0 10px;
+}
+.team-names span{
+    color: #515151;
+    font-weight: 600;
 }

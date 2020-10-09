@@ -8,12 +8,26 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Home</title>
+    <title>Winner</title>
 
     <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.min.css"
+        rel="stylesheet" />
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/global.css" rel="stylesheet">
     <link href="assets/css/home.css" rel="stylesheet">
+
+    <style>
+        .winner-content {
+            padding: 0 10px;
+            text-align: center;
+        }
+
+        .winner-header {
+            width: 100%;
+            margin: 10px auto;
+        }
+    </style>
 </head>
 
 <body>
@@ -22,80 +36,25 @@
         <div class="main-div">
 
             <div class="include" href="header.html"></div>
-            <!-- Tabs -->
-            <ul class="nav nav-tabs" id="myTab" role="tablist">
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link active" id="cricket-tab" data-toggle="tab" href="#cricket" role="tab"
-                        aria-controls="cricket" aria-selected="true">
-                        <img src="assets/image/tab1.png"><span>cricket</span>
-                    </a>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link" id="football-tab" data-toggle="tab" href="#football" role="tab"
-                        aria-controls="football" aria-selected="false">
-                        <img src="assets/image/tab2.png"><span>football</span></a>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link" id="baseball-tab" data-toggle="tab" href="#baseball" role="tab"
-                        aria-controls="baseball" aria-selected="false">
-                        <img src="assets/image/tab3.png"><span>baseball</span></a>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link" id="basketball-tab" data-toggle="tab" href="#basketball" role="tab"
-                        aria-controls="basketball" aria-selected="false">
-                        <img src="assets/image/tab4.png"><span>basketball</span></a>
-                </li>
-            </ul>
-            <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active" id="cricket" role="tabpanel" aria-labelledby="cricket-tab">
-                    <div class="include" href="slider1.html"></div>
-
-                    <!-- Leagues -->
-                    <div class="leagues">
-                        <div class="import-tag" file-name="league"> </div>
-                        <div class="import-tag" file-name="league"> </div>
-                        <div class="import-tag" file-name="league"> </div>
-                    </div>
-                </div>
-
-                <div class="tab-pane fade" id="football" role="tabpanel" aria-labelledby="football-tab">
-                    <div class="include" href="slider2.html"></div>
-                    <!-- Leagues -->
-                    <div class="leagues">
-                        <div class="import-tag" file-name="league"> </div>
-                        <div class="import-tag" file-name="league"> </div>
-                        <div class="import-tag" file-name="league"> </div>
-                    </div>
-                </div>
-                <div class="tab-pane fade" id="baseball" role="tabpanel" aria-labelledby="baseball-tab">
-                    <div class="include" href="slider3.html"></div>
-                    <!-- Leagues -->
-                    <div class="leagues">
-                        <div class="import-tag" file-name="league"> </div>
-                        <div class="import-tag" file-name="league"> </div>
-                        <div class="import-tag" file-name="league"> </div>
-                    </div>
-                </div>
-                <div class="tab-pane fade" id="basketball" role="tabpanel" aria-labelledby="basketball-tab">
-                    <div class="include" href="slider4.html"></div>
-                    <!-- Leagues -->
-                    <div class="leagues">
-                        <div class="import-tag" file-name="league"> </div>
-                        <div class="import-tag" file-name="league"> </div>
-                        <div class="import-tag" file-name="league"> </div>
-                    </div>
-                </div>
+            <div class="winner-content">
+                <img class="winner-header" src="./assets/image/winner_title.png" />
+                <div>Congratulation to all Winners!</div>
+                <div>last updated on 24-02-2020 at 4:30pm</div>
             </div>
-            <div class="footer">
-                <span>All rights reserved</span>
-            </div>
-
-
+            <main class="container">
+                <div class="row" style="padding-top: 100px">
+                    <div class="col">
+                        <input data-date-format="dd/mm/yyyy" id="datepicker">
+                    </div>
+                </div>
+            </main>
         </div>
         <div></div>
     </div>
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <script src='assets/js/global.js'></script>
@@ -103,12 +62,42 @@
 </body>
 
 </html>
+<style type="text/css">
+    // solution 1:
+    .datepicker {
+        font-size: 0.875em;
+    }
+
+    /* solution 2: the original datepicker use 20px so replace with the following:*/
+
+    .datepicker td,
+    .datepicker th {
+        width: 1.5em;
+        height: 1.5em;
+    }
+</style>
+<script type="text/javascript">
+    $('#datepicker').datepicker({
+        weekStart: 1,
+        daysOfWeekHighlighted: "6,0",
+        autoclose: true,
+        todayHighlight: true,
+    });
+    $('#datepicker').datepicker("setDate", new Date());
+</script>
+
 <script>
+
     $(function () {
+
+
+
         var left_names = ["", "Hyderabad", "Hitters", "Prague"];
         var right_names = ["", "Punjab", "Central Smashers", "United CC"];
         var center_strings = ["", "3 Core", "5 Lakh", "10 Lakh"];
         var league_names = ["", "Indian T20", "Malaysia T20", "Prague T10"];
+
+
 
         $(".import-tag").each(function (index) {
             var href = "components/" + $(this).attr("file-name") + ".html";
