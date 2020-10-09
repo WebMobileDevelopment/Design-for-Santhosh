@@ -72,7 +72,7 @@
     font-weight: 600;
 }
 
-.dropdown-menu {
+.dropdown .dropdown-menu {
     background: transparent;
     border: none;
     margin-left: 1em;

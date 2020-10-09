@@ -1,0 +1,66 @@
+.winner-content {
+    padding: 0 10px;
+    text-align: center;
+    background: #f2f2f26b;
+}
+
+.winner-header {
+    width: 100%;
+    margin: 10px auto;
+}
+
+.date-container {
+    width: 100%;
+    background: #eceaea;
+    padding: 20px 10%;
+}
+
+#datepicker {
+    width: 80%;
+}
+
+/* dropdown css */
+
+.panel-body.dropdown {
+    background: white;
+    color: var(--main-bg-color);
+    padding: 0.2em 0px;
+    box-shadow: #b9b7b7 0px 0px 2px;
+    width: 80%;
+    margin: 10px auto 0;
+}
+
+.panel-body .dropdown-toggle {
+    background: transparent;
+    text-align: center;
+    font-weight: bold;
+    font-size: var(--dropdown-height);
+    line-height: var(--dropdown-height);
+}
+
+.panel-body .dropdown-toggle::after {
+    display: none;
+}
+
+.panel-body .dropdown-menu {
+    width: 100%;
+    font-size: var(--dropdown-menu-font);
+    text-align: center;
+    background: white;
+    margin: 6px 0;
+    border: solid 1px #ccc7c7;
+}
+
+.panel-body .dropdown-menu .dropdown-item {
+    border-bottom: solid 1px #f0f0f0;
+}
+
+tbody td {
+    max-width: 30%;
+}
+
+p {
+    word-break: break-all;
+    margin-bottom: 0.3em;
+    line-height: 1.3em;
+}
