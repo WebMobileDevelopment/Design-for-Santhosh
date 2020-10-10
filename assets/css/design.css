@@ -123,12 +123,12 @@
 	border-bottom: solid 1px #f0f0f0;
 }
 
-.footer {
+.submit-div {
     text-align: center;
     margin: 20px auto;
 }
 
-.footer input {
+.submit-div input {
     padding: 5px 3em;
     font-size: 1.2em;
     font-weight: bold;

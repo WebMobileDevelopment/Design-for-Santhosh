@@ -3,18 +3,12 @@
 }
 
 
-.footer {
-    text-align: center;
-    font-size: 1.2em;
-    margin-bottom: 20px;
-}
 
 .import-tag {
-    width: 100%;
-    height: 140px;
-    border-radius: 20px;
-    margin: 10px auto;
-    background: white;
+	width: 100%;
+	height: 130px;
+	margin: 10px auto;
+	background: white;
 }
 
 .line {

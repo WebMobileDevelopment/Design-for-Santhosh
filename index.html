@@ -20,32 +20,33 @@
     <div class="d-flex justify-content-between">
         <div></div>
         <div class="main-div">
-
-            <div class="include" href="header.html"></div>
-            <!-- Tabs -->
-            <ul class="nav nav-tabs" id="myTab" role="tablist">
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link active" id="cricket-tab" data-toggle="tab" href="#cricket" role="tab"
-                        aria-controls="cricket" aria-selected="true">
-                        <img src="assets/image/tab1.png"><span>cricket</span>
-                    </a>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link" id="football-tab" data-toggle="tab" href="#football" role="tab"
-                        aria-controls="football" aria-selected="false">
-                        <img src="assets/image/tab2.png"><span>football</span></a>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link" id="baseball-tab" data-toggle="tab" href="#baseball" role="tab"
-                        aria-controls="baseball" aria-selected="false">
-                        <img src="assets/image/tab3.png"><span>baseball</span></a>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link" id="basketball-tab" data-toggle="tab" href="#basketball" role="tab"
-                        aria-controls="basketball" aria-selected="false">
-                        <img src="assets/image/tab4.png"><span>basketball</span></a>
-                </li>
-            </ul>
+            <div class="fixed-top">
+                <div class="include" href="header.html"></div>
+                <!-- Tabs -->
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link active" id="cricket-tab" data-toggle="tab" href="#cricket" role="tab"
+                            aria-controls="cricket" aria-selected="true">
+                            <img src="assets/image/game_tabs/tab1.png"><span>cricket</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="football-tab" data-toggle="tab" href="#football" role="tab"
+                            aria-controls="football" aria-selected="false">
+                            <img src="assets/image/game_tabs/tab2.png"><span>football</span></a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="baseball-tab" data-toggle="tab" href="#baseball" role="tab"
+                            aria-controls="baseball" aria-selected="false">
+                            <img src="assets/image/game_tabs/tab3.png"><span>baseball</span></a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="basketball-tab" data-toggle="tab" href="#basketball" role="tab"
+                            aria-controls="basketball" aria-selected="false">
+                            <img src="assets/image/game_tabs/tab4.png"><span>basketball</span></a>
+                    </li>
+                </ul>
+            </div>
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="cricket" role="tabpanel" aria-labelledby="cricket-tab">
                     <div class="include" href="slider1.html"></div>
@@ -86,10 +87,10 @@
                     </div>
                 </div>
             </div>
-            <div class="footer">
+            <div class="col-md-12 mb-3" style="text-align: center;">
                 <span>All rights reserved</span>
             </div>
-
+            <div class="include footer fixed-bottom d-flex justify-content-between" href="footer.html"></div>
 
         </div>
         <div></div>
@@ -97,7 +98,7 @@
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <!-- <script src='https://kit.fontawesome.com/a076d05399.js'></script> -->
     <script src='assets/js/global.js'></script>
 
 </body>
@@ -126,13 +127,12 @@
                 $("#" + league_id + " .team-center-span").html(center_strings[rand_num]);
 
                 var time_span = $("#" + league_id + " .time-span");
-                var second = Math.round(Math.random() * 150000);
-                var days = parseInt(second / 86400);
-                var hours = parseInt((second - days * 86400) / 3600);
-                var minutes = parseInt((second - days * 86400 - hours * 3600) / 60);
-                var seconds = second - days * 86400 - hours * 3600 - minutes * 60;
+                var second = Math.round(Math.random() * 86400);
+                var hours = parseInt(second / 3600);
+                var minutes = parseInt((second - hours * 3600) / 60);
+                var seconds = second - hours * 3600 - minutes * 60;
                 time_span.attr("second", second);
-                time_span.html(days + "D : " + hours + "H : " + minutes + "M : " + seconds + "S");
+                time_span.html(hours + "h : " + minutes + "m : " + seconds + "s");
 
                 $("#" + league_id + " img").on('click', function (event) {
                     event.stopPropagation();
@@ -149,12 +149,11 @@
             $(".time-span").each(function () {
                 var second = Number($(this).attr("second"));
                 second--;
-                var days = parseInt(second / 86400);
-                var hours = parseInt((second - days * 86400) / 3600);
-                var minutes = parseInt((second - days * 86400 - hours * 3600) / 60);
-                var seconds = second - days * 86400 - hours * 3600 - minutes * 60;
+                var hours = parseInt(second / 3600);
+                var minutes = parseInt((second - hours * 3600) / 60);
+                var seconds = second - hours * 3600 - minutes * 60;
                 $(this).attr("second", second);
-                $(this).html(days + "D : " + hours + "H : " + minutes + "M : " + seconds + "S");
+                $(this).html(hours + "h : " + minutes + "m : " + seconds + "s");
             });
         }, 1000);
         // $(".leagues img").click(function (e) {

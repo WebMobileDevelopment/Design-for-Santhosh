@@ -1,7 +1,12 @@
+body {
+    font-size: 0.8rem;
+}
+
+.fixed-top, .fixed-bottom {
+    position: sticky;
+}
 
 .navbar {
-    /* border-bottom-left-radius: 16px; */
-    /* border-bottom-right-radius: 16px; */
     background-color: black !important;
 }
 
@@ -24,6 +29,7 @@
 .nav-tabs {
     background: #fff;
     border-radius: 0px 0px 10px 10px;
+    box-shadow: black 0px 0px 2px;
 }
 
 .nav-tabs .nav-item {
@@ -112,9 +118,44 @@
 .button-center {
     text-align: center;
 }
-.carousel-item img{
+
+.carousel-item img {
     border-radius: 16px;
 }
+
+/* footer */
+
+.footer {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 0.9em;
+    background: white;
+    padding: 4px 0;
+    box-shadow: #3e3e3e2e 0px 0px 1px 1px;
+}
+
+.footer a {
+	color: #7b7b7b;
+	padding-top: 4px;
+	width: 20%;
+}
+
+.footer img {
+    width: 33%;
+    height: auto;
+}
+
+.footer span {
+    display: block;
+}
+
+.footer .active {
+    color: #0088FF;
+    background-color: #fff;
+    border-color: #fff #fff #08F #fff;
+    border-bottom: solid 3px;
+}
+
 @media only screen and (min-width: 768px) {
     .main-div {
         width: 375px;

@@ -17,8 +17,11 @@
     <div class="d-flex justify-content-between">
         <div></div>
         <div class="main-div">
-            <div class="include" href="header.html"></div>
-            <div class="include" href="design_tab_header.html"></div>
+            <div class="fixed-top">
+                <div class="include" href="header.html"></div>
+                <div class="include" href="design_tab_header.html"></div>
+            </div>
+
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="cricket" role="tabpanel" aria-labelledby="cricket-tab">
                     <div class="include" href="slider1.html"></div>
@@ -134,7 +137,7 @@
                             </div>
                         </div>
 
-                        <div class="footer"><input class="btn btn-success" type="submit" value="Submit"></div>
+                        <div class="submit-div"><input class="btn btn-success" type="submit" value="Submit"></div>
                     </form>
                 </div>
                 <div class="tab-pane fade" id="football" role="tabpanel" aria-labelledby="football-tab">
@@ -252,7 +255,7 @@
                             </div>
                         </div>
 
-                        <div class="footer"><input class="btn btn-success" type="submit" value="Submit"></div>
+                        <div class="submit-div"><input class="btn btn-success" type="submit" value="Submit"></div>
                     </form>
 
 
@@ -373,7 +376,7 @@
                             </div>
                         </div>
 
-                        <div class="footer"><input class="btn btn-success" type="submit" value="Submit"></div>
+                        <div class="submit-div"><input class="btn btn-success" type="submit" value="Submit"></div>
                     </form>
 
 
@@ -493,13 +496,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="footer"><input class="btn btn-success" type="submit" value="Submit"></div>
+                        <div class="submit-div"><input class="btn btn-success" type="submit" value="Submit"></div>
                     </form>
-
-
-
                 </div>
             </div>
+            <div class="include footer fixed-bottom d-flex justify-content-between" href="footer.html"></div>
+
         </div>
         <div></div>
     </div>
@@ -512,6 +514,7 @@
     <script src='assets/js/global.js'></script>
 
 </body>
+
 </html>
 
 <script>
